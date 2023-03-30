@@ -9,10 +9,7 @@ M.setup = function(opts)
 	end
 
 	-- Make sure the share directory exists
-	local home_dir = os.getenv("USERPROFILE")
-	print("home_dir is")
-	print(home_dir)
-	local share_dir = home_dir .. "/.local/share/nvim"
+	local share_dir = os.getenv("USERPROFILE") .. "/.local/share/nvim"
 	if vim.fn.has("win32") == 1 then
 	  share_dir = share_dir:gsub("/", "\\")
 	end
